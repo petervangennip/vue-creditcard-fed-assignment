@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "nvm-use && vue-cli-service serve",
+    "build": "nvm-use && vue-cli-service build",
+    "lint": "nvm-use && vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.3.2",
@@ -20,9 +20,12 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
+    "eslint-plugin-vue-a11y": "0.0.31",
     "node-sass": "^4.12.0",
+    "nvm-use": "^1.0.3",
     "prettier": "^1.18.2",
     "sass-loader": "^8.0.0",
+    "svg-sprite-loader": "^4.1.6",
     "vue-template-compiler": "^2.6.10"
   }
 }
