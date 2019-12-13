@@ -7,6 +7,12 @@
     "build": "nvm-use && vue-cli-service build",
     "lint": "nvm-use && vue-cli-service lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:petervangennip/vue-creditcard-fed-assignment.git"
+  },
+  "author": "Peter van Gennip <peter.van.gennip@valtech.com>",
+  "license": "UNLICENSED",
   "dependencies": {
     "core-js": "^3.3.2",
     "vue": "^2.6.10"
