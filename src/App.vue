@@ -10,7 +10,7 @@
 import TheForm from '@/components/molecules/form/TheForm.vue';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     TheForm,
   },
@@ -53,7 +53,7 @@ export default {
     var(--color-blue)
   );
   background-size: 300% 300%;
-  animation: gradientbackground 15s ease infinite;
+  // animation: gradientbackground 15s ease infinite;
 }
 
 .card-wrapper {
