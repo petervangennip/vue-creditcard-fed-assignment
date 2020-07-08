@@ -105,8 +105,30 @@
 export default {
   name: 'TheCard',
   props: {
-    labels: Object,
-    fields: Object,
+    labels: {
+      type: Object,
+      default: () => {
+        return {
+          cardName: '',
+          cardNumber: '',
+          cardMonth: '',
+          cardYear: '',
+          cardCvv: '',
+        };
+      },
+    },
+    fields: {
+      type: Object,
+      default: () => {
+        return {
+          cardNumber: 'card-number',
+          cardName: 'card-name',
+          cardMonth: 'card-month',
+          cardYear: 'card-year',
+          cardCvv: 'card-cvv',
+        };
+      },
+    },
     isActive: Boolean,
     cvvFocus: Boolean,
   },

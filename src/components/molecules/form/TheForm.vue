@@ -147,6 +147,12 @@ export default {
         this.cvvFocus = false;
       }
     },
+    handleFocus(e) {
+      console.log(e);
+    },
+    handleBlur(e) {
+      console.log(e);
+    },
   },
 };
 </script>
