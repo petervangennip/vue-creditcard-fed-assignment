@@ -1,12 +1,12 @@
 <template>
   <div
-    class="card"
     :class="[{ 'is-active': cvvFocus }, { 'is-active': isActive }]"
+    class="card"
     aria-hidden="true"
   >
     <div class="p-4 card-content card__front">
       <BaseIcon width="540" height="170" icon="visa" class="bg-icon" />
-      <div class="d-flex card-top" :class="{ 'is-active': isActive }">
+      <div :class="{ 'is-active': isActive }" class="d-flex card-top">
         <div class="card__chip">
           <BaseIcon width="52" height="52" icon="sim-chip" />
         </div>
@@ -16,18 +16,18 @@
       </div>
 
       <div class="card-middle">
-        <div class="card__number" :ref="fields.cardNumber">
+        <div :ref="fields.cardNumber" class="card__number">
           <template>
             <span v-for="(n, $index) in currentPlaceholder" :key="$index + 1">
               <transition name="slide-fade-up">
                 <div
-                  class="card-item__numberItem x"
                   :key="currentPlaceholder"
                   v-if="labels.cardNumber.length > $index"
+                  class="card-item__numberItem x"
                 >
                   {{ labels.cardNumber[$index] }}
                 </div>
-                <div class="card-item__numberItem y" :key="currentPlaceholder + 1" v-else>
+                <div :key="currentPlaceholder + 1" v-else class="card-item__numberItem y">
                   {{ n }}
                 </div>
               </transition>
@@ -38,47 +38,47 @@
 
       <div class="card-bottom d-flex">
         <div class="p-2 flex-grow-1">
-          <div class="card-item__info" :ref="fields.cardName">
+          <div :ref="fields.cardName" class="card-item__info">
             <div class="card-item--text-shadow">Card Holder</div>
             <transition name="slide-fade-up">
-              <div v-if="labels.cardName.length" key="1">
+              <div key="1" v-if="labels.cardName.length">
                 <transition-group name="slide-fade-right">
                   <span
-                    class="card-item--text-shadow"
                     v-for="(n, $index) in labels.cardName.replace(/\s\s+/g, ' ')"
                     :key="$index + 1"
+                    class="card-item--text-shadow"
                     >{{ n }}</span
                   >
                 </transition-group>
               </div>
-              <div v-else key="2" class="card-item--text-shadow">Full Name</div>
+              <div key="2" v-else class="card-item--text-shadow">Full Name</div>
             </transition>
           </div>
         </div>
-        <div class="p-2" ref="card-date">
+        <div ref="card-date" class="p-2">
           <div class="card-item--text-shadow">Expires</div>
           <div class="d-flex">
             <div class="mr-2">
               <transition name="slide-fade-up">
                 <span
-                  class="card-item--text-shadow"
                   v-if="labels.cardMonth"
                   :key="labels.cardMonth"
+                  class="card-item--text-shadow"
                   >{{ labels.cardMonth }}</span
                 >
-                <span class="card-item--text-shadow" v-else key="2">MM</span>
+                <span key="2" v-else class="card-item--text-shadow">MM</span>
               </transition>
             </div>
             /
             <div class="ml-2">
               <transition name="slide-fade-up">
                 <span
-                  class="card-item--text-shadow"
                   v-if="labels.cardYear"
                   :key="labels.cardYear"
+                  class="card-item--text-shadow"
                   >{{ labels.cardYear }}</span
                 >
-                <span class="card-item--text-shadow" v-else key="2">YY</span>
+                <span key="2" v-else class="card-item--text-shadow">YY</span>
               </transition>
             </div>
           </div>
