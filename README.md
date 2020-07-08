@@ -1,4 +1,5 @@
 # vue-interactive-creditcard
+This is a interactive creditcard made as assignment for new front-end developers
 
 ## Author
 [Peter van Gennip](mailto:peter.van.gennip@valtech.com)
