@@ -101,7 +101,6 @@ export default {
       },
     },
   },
-  computed: {},
   data() {
     return {
       fields: {
@@ -120,6 +119,7 @@ export default {
       cvvBlur: false,
     };
   },
+  computed: {},
   methods: {
     changeName(e) {
       this.formData.cardName = e.target.value;
@@ -146,12 +146,6 @@ export default {
       if (this.cvvFocus === true) {
         this.cvvFocus = false;
       }
-    },
-    handleFocus(e) {
-      console.log(e);
-    },
-    handleBlur(e) {
-      console.log(e);
     },
   },
 };
