@@ -7,8 +7,6 @@
           :value="formData.cardName"
           :maxlength="cardNumberMaxLength"
           @input="changeName"
-          @focus="handleFocus"
-          @blur="handleBlur"
           type="text"
           class="form-control"
           required
@@ -146,12 +144,6 @@ export default {
       if (this.cvvFocus === true) {
         this.cvvFocus = false;
       }
-    },
-    handleFocus(e) {
-      console.log(e);
-    },
-    handleBlur(e) {
-      console.log(e);
     },
   },
 };
