@@ -45,12 +45,6 @@ Install extensions:
 
     ```sh
     npm run serve
-    ```  
-
-4. Compiles and hot-reloads storybook environment
-
-    ```sh
-    npm run storybook
-    ```      
+    ```   
 
 
